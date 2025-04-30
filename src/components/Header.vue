@@ -1,13 +1,14 @@
 <template>
   <n-card :bordered="false" class="header" content-style="padding: 0">
     <section>
-      <div class="logo" @click="router.push('/')">
+      <a class="logo" href="https://tool.djp.org.cn" target="_blank"
+      rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
         <img src="/ico/favicon.png" alt="logo" />
         <div class="name">
           <n-text>今日热榜</n-text>
           <n-text :depth="3">汇聚全网热点，热门尽览无余</n-text>
         </div>
-      </div>
+      </a>
       <div class="current-time" v-if="store.timeData">
         <n-text class="time">{{ store.timeData.time.text }}</n-text>
         <n-text class="date" :depth="3">
